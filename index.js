@@ -131,10 +131,19 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 // pass array, name, rating, feedback as params
-function addReview(/*Your Code Here */) {
-  /*Your Code Here */
+function addReview(array, name, rating, feedback) {
+  reviews.push({ name, rating, feedback });
+  return array;
   // push the object to the end of the array and return the resulting array
 }
+console.log(
+  addReview(
+    reviews,
+    "Daniella",
+    5,
+    "Beautiful atmosphere and wonderful vegan options!"
+  )
+);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -147,8 +156,8 @@ Use the getReviewByIndex function below to do the following:
 */
 
 // array, index
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array, index) {
+  return `${array[index].name} gave the restaurant a ${array[index].rating} star review, and their feedback was: ${array[index].feedback}`;
   //return the string "{array[index].name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"
 }
 
@@ -164,8 +173,11 @@ Use the getLastReview function below to do the following:
 */
 
 //receive an array as a param
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array) {
+  array[array.length - 1];
+  return `${array[array.length - 1].name} gave the restaurant a ${
+    array[array.length - 1].rating
+  } star review, and their feedback was: ${array[array.length - 1].feedback}`;
   // array.length -1 will be usefull here
 }
 
